@@ -1,0 +1,22 @@
+# Dependencies & build output: the image installs and builds its own
+node_modules
+dist
+coverage
+*.tsbuildinfo
+
+# Secrets: never bake these into an image layer
+.env
+.env.*
+!.env.example
+
+# Not needed inside the image
+test
+*.md
+.vscode
+.idea
+npm-debug.log*
+
+# Docker files themselves
+Dockerfile
+.dockerignore
+docker-compose*.yml
